@@ -4,7 +4,10 @@ import { useState } from 'react';
 
 function App() {
 
-
+  const [value, setValue] = useState(0);
+  const [redoList, setRedoList] = useState([]);
+  const [history, setHistory] = useState([]);
+  const [undoCount, setUndoCount] = useState(0);
 
   const maintainHistory = (key, prev, curr) => {
     console.log(key, prev, curr);
